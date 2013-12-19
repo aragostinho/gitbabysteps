@@ -1,0 +1,71 @@
+===========================================================================
+Primeiros passos
+===========================================================================
+
+1) Instalar o Git Bash
+2) Criar um diretorio exemplo
+3) Usar o comando git init
+4) Aplicando configurações globais nome e email
+5) Amigão git status (explicar WD, Stanging, Local Repo, Server Repo)
+6) Usando o git add (-A adiciona, . não adiciona alterçaões e remoções)
+7) Usando o git log e git show (--name-only [checksum]  ex: git show -name-only f27b)
+8) Commit (-am -m)
+
+
+===========================================================================
+Trabalhando com repositorio remoto
+===========================================================================
+
+1) Adicionando um repositorio remoto (Ex: git remote add origin git@github.com:aragostinho/pm87-caelum.git)
+   - Explicar possibilidades de se trabalhar com mais repositorios remotos
+   - Explicar a montagem da url git@github.com:[conta]/[repositorio].git
+2) git remote show
+3) Criando certificado publico e usando ssh-keygen para acesso ao repositorio 
+   - ssh-keygen -C "email da conta git" -t rsa
+   - abrindo pasta de certificado no diretorio do usuario local, copiando o seu conteudo e aplicando em Settings Account no Git
+   - testando ssh -T git@github.com
+4) Primeiro push  (git push -u origin master) e demais pushs 
+
+
+
+===========================================================================
+Trabalhando com branchs
+===========================================================================
+
+ Definição de Branch
+ Ex: Ramos, ramificação...
+
+ Conceito
+ Criar ramificações no repositorio que partem de uma determinada origem (master ou outra branch ) com o intuito
+ de isolar o controle de versão e permitir posteriormente a sua regressão e unificação.
+
+ Branch local: Vida curta. deve ser excluida logo apos a sua utilizacao
+ Ex: Branch de bugs, Branch de correções
+
+ Branch remota: Utilizada para grandes alterações e projetos
+ Ex: Novas funcionalides para a conta de usuário, Novo sistema de cotações
+
+
+ 1) git branch //lista todas as branchs do repositorio
+ 2) git branch [nome da branch]  //cria uma branch no repositorio
+ 3) git checkout [nome da branch]  //move o ponteiro HEAD para uma determinda branch
+  // demonstrar alterações no mesmo arquivo + troca de branchs (demostração prática do conceito)
+
+ 4) git checkout -b [nome da branch]  //cria e move o ponteiro para a branch
+ 5) git merge [nome da branch] //aplicando merge
+ 6) git branch -d [nome da branch] // apaga a branch 
+
+
+
+
+===========================================================================
+Resolvendo conflitos
+===========================================================================
+
+ Passos 
+  1) Editar arquivo listado no conflito ou seja remover o conflito
+  2) Adicionar o arquivo alterado no stanging (add)
+  3) Commitar o arquivo alterado
+
+
+  //fazer demonstração de conflito
