@@ -1,20 +1,31 @@
-===========================================================================
-##Primeiros passos
-===========================================================================
+#Primeiros passos
 
-1) Instalar o Git Bash
-2) Criar um diretorio exemplo
-3) Usar o comando git init
-4) Aplicando configuraÁıes globais nome e email
-5) Amig„o git status (explicar WD, Stanging, Local Repo, Server Repo)
-6) Usando o git add (-A adiciona, . n„o adiciona alterÁaıes e remoÁıes)
-7) Usando o git log e git show (--name-only [checksum]  ex: git show -name-only f27b)
-8) Commit (-am -m)
+1. Instalar o Git Bash
+http://git-scm.com/downloads
+2. Acesse o gitbash e crie um diretorio exemplo
+3. Usar o comando git init para iniar o repositorio e come√ßar
+4. Aplicando configura√ß√µes globais nome e email
+
+  `git config --global user.name "Nome Completo"`
+  
+  `git config --global user.email "emaildasuacontanogithub"`
+  
+5. Amig√£o -> `git status` (explicar WD, Stanging, Local Repo, Server Repo)
+6. Usando o git add (-A adiciona, . n√£o adiciona altera√ß√µes e remo√ß√µes)
+
+   `git add -A`
+
+   `git add .`
+
+7. Usando o `git log` e `git show` (--name-only [checksum]  ex: `git show -name-only f27b`)
+8. Para commitar
+
+   `git commit -am "mensagem para o commit"`
+
+   `git commit -m "mensagem para o commit"`
 
 
-===========================================================================
-##Trabalhando com repositorio remoto
-===========================================================================
+#Trabalhando com repositorio remoto
 
 1) Adicionando um repositorio remoto (Ex: git remote add origin git@github.com:aragostinho/pm87-caelum.git)
    - Explicar possibilidades de se trabalhar com mais repositorios remotos
@@ -28,44 +39,36 @@
 
 
 
-===========================================================================
-##Trabalhando com branchs
-===========================================================================
+#Trabalhando com branchs
 
- DefiniÁ„o de Branch
- Ex: Ramos, ramificaÁ„o...
+#### Defini√ß√£o de Branch
+ Ex: Ramos, ramifica√ß√£o...
 
- Conceito
- Criar ramificaÁıes no repositorio que partem de uma determinada origem (master ou outra branch ) com o intuito
- de isolar o controle de vers„o e permitir posteriormente a sua regress„o e unificaÁ„o.
+#### Conceito
+ Criar ramifica√ß√µes no repositorio que partem de uma determinada origem (master ou outra branch ) com o intuito
+ de isolar o controle de vers√£o e permitir posteriormente a sua regress√£o e unifica√ß√£o.
 
- Branch local: Vida curta. deve ser excluida logo apos a sua utilizacao
- Ex: Branch de bugs, Branch de correÁıes
+#### Branch local: Vida curta. deve ser excluida logo apos a sua utilizacao
+ Ex: Branch de bugs, Branch de corre√ß√µes
 
- Branch remota: Utilizada para grandes alteraÁıes e projetos
- Ex: Novas funcionalides para a conta de usu·rio, Novo sistema de cotaÁıes
+#### Branch remota: Utilizada para grandes altera√ß√µes e projetos
+ Ex: Novas funcionalides para a conta de usu√°rio, Novo sistema de cota√ß√µes
 
 
- 1) git branch //lista todas as branchs do repositorio
- 2) git branch [nome da branch]  //cria uma branch no repositorio
- 3) git checkout [nome da branch]  //move o ponteiro HEAD para uma determinda branch
-  // demonstrar alteraÁıes no mesmo arquivo + troca de branchs (demostraÁ„o pr·tica do conceito)
-
- 4) git checkout -b [nome da branch]  //cria e move o ponteiro para a branch
- 5) git merge [nome da branch] //aplicando merge
- 6) git branch -d [nome da branch] // apaga a branch 
-
+ 1. `git branch` //lista todas as branchs do repositorio
+ 2. `git branch nome_da_branch`  //cria uma branch no repositorio
+ 3. `git checkout nome_da_branch`  //move o ponteiro HEAD para uma determinda branch
+ 4. // demonstrar altera√ß√µes no mesmo arquivo + troca de branchs (demostra√ß√£o pr√°tica do conceito)
+ 5. `git checkout -b nome_da_branch`  //cria e move o ponteiro para a branch
+ 6. `git merge nome_da_branch` //aplicando merge
+ 7. `git branch -d nome_da_branch` // apaga a branch 
 
 
+#Resolvendo conflitos
 
-===========================================================================
-##Resolvendo conflitos
-===========================================================================
+###Passos 
+1. Editar arquivo listado no conflito ou seja remover o conflito
+2. Adicionar o arquivo alterado no stanging (add)
+3. Commitar o arquivo alterado
 
- Passos 
-  1) Editar arquivo listado no conflito ou seja remover o conflito
-  2) Adicionar o arquivo alterado no stanging (add)
-  3) Commitar o arquivo alterado
-
-
-  //fazer demonstraÁ„o de conflito
+//fazer demonstra√ß√µes de conflito
